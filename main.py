@@ -3,7 +3,7 @@
 import requests  # allows to send HTTP requests using Python
 import os
 UFO = "https://api.openweathermap.org/data/2.5/forecast"
-key = "805b20023ac480ec962bf84a0145a59d"
+key = [OWM_API_KEY]
 
 weather_parameters = {
     "lat": 11.2671,
@@ -31,8 +31,8 @@ else:
 from twilio.rest import Client
 from twilio.http.http_client import TwilioHttpClient
 
-account_sid = 'ACff453c5e2d6f974ae5ba26e49963d090'
-auth_token = 'bcb80653c95af4e8dc490ae99a6a9af9'
+account_sid = [twilio_acc_SID]
+auth_token = [twilio_auth_token]
 
 proxy_client = TwilioHttpClient()
 proxy_client.session.proxies = {'https': os.environ['https_proxy']}
